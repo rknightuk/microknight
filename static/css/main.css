@@ -1,0 +1,281 @@
+:root {
+  --background-body: #dfe6e9;
+  --body-text: #000;
+  --primary: #E93CBC;
+  --wide-width: 1000px;
+  --small-width: 650px;
+  --subtle: #909090;
+  --small-font: 0.9em;
+  --top-margin: 50px;
+}
+
+@media (prefers-color-scheme: dark) {
+:root {
+    --background-darker: #161616;
+    --background-body: #1a1a1a;
+    --body-text: #fff;
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: var(--background-body);
+  color: var(--body-text);
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1em;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+a {
+  color: var(--primary);
+}
+
+.page-content {
+  max-width: var(--wide-width);
+}
+
+.page-content {
+  margin: 0 auto;
+}
+
+.header {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+}
+
+.header a {
+  color: var(--body-text);
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.header a:hover {
+  text-decoration: underline;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.header .site-name {
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+.header svg.icon {
+  fill: var(--body-text);
+  width: 30px;
+  height: 30px;
+}
+
+.header svg.icon:hover {
+  fill: var(--primary);
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    width: 150px;
+    align-items: center;
+}
+
+@media (max-width: 670px) {
+  .header {
+    padding: 10px 20px;
+  }
+  .social {
+    align-items: flex-start;
+    margin-top: 5px;
+  }
+
+  .site-categories {
+    margin-top: 20px;
+  }
+}
+
+.social a:hover {
+  text-decoration: none;
+}
+
+.header-wrapper {
+  max-width: var(--wide-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*
+
+.site-header a {
+  text-decoration: none;
+}
+
+.site-header a:hover {
+  text-decoration: underline;
+}
+
+.site-header .wrapper {
+  margin:  0 auto;
+  display: flex;
+  padding: 20px;
+  max-width: var(--wide-width);
+}*/
+/*
+@media (max-width:  600px)
+{
+  .site-header .wrapper {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+
+.site-header .wrapper .site-title-wrapper {
+  flex: 1;
+}*/
+
+/*.site-nav {
+  flex: 1;
+  display: flex;
+}
+
+.site-nav .nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  flex:  1;
+}
+
+.site-nav .nav-icons {
+  flex: 1;
+}
+*/
+.post {
+  max-width: var(--small-width);
+  margin: var(--top-margin) auto;
+  padding: 0 20px;
+}
+
+.post img {
+  max-width: 100%;
+  height: auto;
+}
+
+.post img:hover {
+  cursor: pointer;
+}
+
+.post-header h1 {
+  margin-bottom: 0;
+}
+
+.post-meta {
+  margin-top: 0;
+  font-size: var(--small-font);
+  color: var(--subtle);
+}
+
+.post-meta a {
+  text-decoration: none;
+  color: var(--subtle);
+}
+
+.post-meta a:hover {
+  text-decoration: underline;
+  color: var(--primary);
+}
+
+hr {
+    width: 30px;
+}
+
+.post-list {
+  max-width: var(--wide-width);
+  margin: 0 auto;
+}
+
+.archive_categories {
+  margin-top: var(--top-margin);
+  max-width: 300px;
+}
+
+.footer {
+  max-width: var(--wide-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--small-font);
+  margin-bottom: 30px;
+}
+
+.photogrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.photogrid img:first-child {
+  grid-column: span 3;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.photos-grid-container {
+  max-width: var(--wide-width);
+  margin: 0 auto;
+  margin-top: 50px;
+  display: grid; 
+  grid-column-gap: 15px; 
+  grid-row-gap: 15px; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.photos-grid-container a {
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.photos-grid-container img {
+  height: 100%!important;
+  width: 100%;
+  object-fit: cover;
+}
+
+.pagination-nav {
+  max-width: var(--small-width);
+  margin: 0 auto;
+  display: flex;
+}
+
+.pagination-nav div {
+  flex: 1;
+}
+
+.pagination-nav div:last-child {
+  text-align: right;
+}
+
+.post-tags {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.post-tags a {
+  display: inline-block;
+  font-weight: 500;
+  line-height: 30px;
+  color: var(--lit);
+  background: var(--primary);
+  border-radius: 5px;
+  padding: 5px 20px;
+  text-decoration: none;
+}
+
+.post-tags a:hover {
+  text-decoration: underline;
+}

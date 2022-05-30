@@ -1,0 +1,10 @@
+name = "Microknight"
+license = "MIT"
+licenselink = "https://github.com/rknightuk/microknight"
+description = "My Micro.blog theme"
+homepage = "https://github.com/rknightuk/microknight"
+min_version = "0.57.1"
+
+[author]
+  name = "rknightuk"
+  homepage = "https://rknight.me/"
