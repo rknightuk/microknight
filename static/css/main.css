@@ -81,7 +81,7 @@ a {
 .social {
     display: flex;
     justify-content: space-around;
-    width: 150px;
+    width: 200px;
     align-items: center;
 }
 
@@ -196,11 +196,15 @@ hr {
 .post-list {
   max-width: var(--wide-width);
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .archive_categories {
   margin-top: var(--top-margin);
-  max-width: 300px;
+}
+
+.archive_categories p {
+  margin: 0;
 }
 
 .footer {
@@ -211,6 +215,7 @@ hr {
   justify-content: center;
   font-size: var(--small-font);
   margin-bottom: 30px;
+  padding: 0 20px;
 }
 
 .photogrid {
@@ -249,6 +254,7 @@ hr {
 .pagination-nav {
   max-width: var(--small-width);
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
 }
 
@@ -278,4 +284,8 @@ hr {
 
 .post-tags a:hover {
   text-decoration: underline;
+}
+
+.bookshelf_book {
+  padding-bottom: 10px;
 }
