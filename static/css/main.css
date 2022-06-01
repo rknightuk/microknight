@@ -289,3 +289,9 @@ hr {
 .bookshelf_book {
   padding-bottom: 10px;
 }
+
+.microblog_conversation {
+  max-width: var(--small-width);
+  margin: 0 auto;
+  margin-top: 20px;
+}
