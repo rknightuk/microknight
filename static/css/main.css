@@ -290,6 +290,11 @@ hr {
   padding-bottom: 10px;
 }
 
+.bookshelf_book img {
+  width: 55px;
+  height: 76px;
+}
+
 .microblog_conversation {
   max-width: var(--small-width);
   margin: 0 auto;
