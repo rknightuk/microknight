@@ -28,6 +28,12 @@ body {
 
 blockquote {
   font-style: italic;
+  border-left: 1px solid var(--primary);
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 40px;
+  padding-left: 30px;
 }
 
 a {
@@ -91,11 +97,15 @@ a {
   }
   .social {
     align-items: flex-start;
-    margin-top: 5px;
+    margin-top: 11px;
   }
 
   .site-categories {
     margin-top: 20px;
+  }
+  .header svg.icon {
+    width: 23px;
+    height: 23px;
   }
 }
 
@@ -228,6 +238,10 @@ hr {
   grid-column: span 3;
   margin: 0 auto;
   width: 100%;
+}
+
+.photogrid img:not(:first-child) {
+  aspect-ratio: 1;
 }
 
 .photos-grid-container {
