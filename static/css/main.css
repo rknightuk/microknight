@@ -8,6 +8,7 @@
   --small-font: 0.9em;
   --top-margin: 50px;
   --post-bg: #292828;
+  --post-border: black;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,6 +16,8 @@
     --background-darker: #161616;
     --background-body: #1a1a1a;
     --body-text: #fff;
+    --post-bg: #dbe5e9;
+    --post-border: #d4d4d4;
   }
 }
 
@@ -170,7 +173,7 @@ a {
   margin: var(--top-margin) auto;
   padding: 10px 20px 0 20px;
   background: var(--post-bg);
-  border: 1px solid black;
+  border: 1px solid var(--post-border);
 }
 
 .post img {
