@@ -16,13 +16,6 @@
   <link rel="stylesheet" href="{{ "custom.css" | relURL }}">
   <link rel="canonical" href="{{ .Permalink }}">
 
-    {{ if .RSSLink -}}
-      <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-      <link href="{{ "podcast.xml" | absURL }}" rel="alternate" type="application/rss+xml" title="Podcast" />
-      <link rel="alternate" type="application/json" title="{{ .Site.Title }}" href="{{ "feed.json" | absURL }}" />
-      <link rel="EditURI" type="application/rsd+xml" href="{{ "rsd.xml" | absURL }}" />
-    {{ end -}}
-
 	<link rel="me" href="https://micro.blog/{{ .Site.Author.username }}" />
 	{{ with .Site.Params.twitter_username }}
 		<link rel="me" href="https://twitter.com/{{ . }}" />
@@ -66,6 +59,12 @@
   {{ template "_internal/twitter_cards.html" . }}
   <!---->
   {{ end }} 
+    {{ range .Site.Params.plugins_css }}
+        <link rel="stylesheet" href="{{ . }}" />
+    {{ end }}
+    {{ range $filename := .Site.Params.plugins_html }}
+        {{ partial $filename $ }}
+    {{ end }}
   
   </head>
 
