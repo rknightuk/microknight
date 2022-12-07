@@ -4,7 +4,7 @@
 	{{ $list := ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
 	{{ if gt (len $list) 0 }}
 		<div class="archive_categories">
-			{{ range $list }}
+			{{ range (sort $list "Title") }}
 				<p><a href="{{ .Permalink }}">{{ .Title }}</a> &bull; <a href="{{ .Permalink }}/feed.xml">RSS</a></p>
 			{{ end }}
 		</div>
