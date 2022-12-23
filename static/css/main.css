@@ -1,5 +1,5 @@
 :root {
-  --background-body: #dfe6e9;
+  --background-body: #ff00ff;
   --body-text: #000;
   --primary: #E93CBC;
   --wide-width: 1000px;
@@ -121,9 +121,11 @@ a {
 }
 
 .post {
-  max-width: var(--small-width);
-  margin: var(--top-margin) auto;
-  padding: 10px 20px;
+    max-width: var(--small-width);
+    margin: var(--top-margin) auto;
+    padding: 10px 20px;
+    border: 2px solid var(--body-text);
+    box-shadow: 5px 5px var(--body-text);
 }
 
 .post img {
@@ -145,15 +147,27 @@ a {
 }
 
 .post-meta {
-  margin-top: 0;
-  font-size: var(--small-font);
-  color: var(--subtle);
-  margin-bottom: -10px;
+    margin-top: 0;
+    font-size: var(--small-font);
+    color: var(--subtle);
+    margin-bottom: -5px;
+    margin-left: -35px;
+    background-color: var(--background-body);
+    border: 2px solid var(--body-text);
+    padding: 3px 10px;
+    box-shadow: 3px 3px var(--body-text);
+}
+
+@media (max-width: 745px)
+{
+    .post-meta {
+        margin-left: 0;
+    }
 }
 
 .post-meta a {
   text-decoration: none;
-  color: var(--subtle);
+  color: var(--body-text);
 }
 
 .post-meta a:hover {
@@ -210,9 +224,9 @@ hr {
   max-width: var(--wide-width);
   margin: 0 auto;
   margin-top: 50px;
-  display: grid; 
-  grid-column-gap: 15px; 
-  grid-row-gap: 15px; 
+  display: grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
